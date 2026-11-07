@@ -1,0 +1,4 @@
+# UI 模拟点击桥独立运行所需依赖（2026-11-05 从 D:\llm/backend/requirements.txt 分离）
+adbutils==2.12.0
+retry2==0.9.5
+./uiautomator2

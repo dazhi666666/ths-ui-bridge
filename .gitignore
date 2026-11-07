@@ -1,0 +1,9 @@
+venv/
+logs/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+*.db
+*.bin
+*.sqlite*

@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "uiautomator2"
+version = "3.2.0"
+description = "uiautomator for android device"
+homepage = "https://github.com/openatx/uiautomator2"
+authors = ["codeskyblue <codeskyblue@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+include = ["*/assets/*"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "*"
+lxml = "*"
+adbutils = ">=2.11.0,<3"
+Pillow = "*"
+retry2 = "^0.9.5"
+click = "*"
+importlib-resources = {version = "*", markers = "python_version < \"3.9\""}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+isort = "^5.13.2"
+pytest-cov = "^4.1.0"
+ipython = "*"
+coverage = "^7.6.0"
+
+[tool.poetry.scripts]
+uiautomator2 = "uiautomator2.__main__:main"
+u2cli = "uiautomator2.agent_cli.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>盯盘桥 · 模拟交易控制台</title>
+  <link rel="stylesheet" href="/dashboard.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">盯</span>
+        <div><strong>盯盘桥</strong><small>WATCH TRADER BRIDGE</small></div>
+      </div>
+      <div class="service-pill"><i></i><span id="serviceText">正在连接</span></div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">BLUESTACKS × 同花顺</p>
+        <h1>模拟交易<br><em>运行控制台</em></h1>
+        <p class="intro">盯盘手信号经过状态白名单、事件去重与模拟账户校验后，才会进入同花顺。</p>
+      </div>
+      <div class="hero-side">
+        <span>自动执行</span>
+        <strong id="liveMode">—</strong>
+        <small>仅限模拟账户</small>
+      </div>
+    </section>
+
+    <section class="status-grid">
+      <article class="status-card"><span>BlueStacks</span><strong id="deviceState">检查中</strong><small id="deviceMeta">emulator-5554</small></article>
+      <article class="status-card"><span>同花顺</span><strong id="appState">检查中</strong><small id="appMeta">等待应用状态</small></article>
+      <article class="status-card"><span>Webhook</span><strong id="hookState">检查中</strong><small id="hookMeta">127.0.0.1:8877</small></article>
+      <article class="status-card accent"><span>安全边界</span><strong>模拟盘</strong><small>实盘页面自动拒绝</small></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><p class="eyebrow">ACTIVITY</p><h2>最近事件</h2></div>
+        <button id="refreshBtn" type="button">刷新状态</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>接收时间</th><th>股票</th><th>动作</th><th>验证状态</th><th>执行结果</th></tr></thead>
+          <tbody id="eventRows"><tr><td colspan="5" class="empty">正在读取事件…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer><span id="lastUpdate">尚未刷新</span><span>凭据不会显示在此页面</span></footer>
+  </main>
+  <script src="/dashboard.js"></script>
+</body>
+</html>

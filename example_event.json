@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "event_id": "dry-run-example-000001",
+  "event_type": "analysis.completed",
+  "turn_id": "dry-run-turn-000001",
+  "symbol": "000001",
+  "status": "completed",
+  "decision": {
+    "id": "dry-run-decision-000001",
+    "action": "buy",
+    "symbol": "000001",
+    "trading_mode": "auction",
+    "price_type": "limit",
+    "limit_price": 10.00,
+    "quantity": 100,
+    "order_id": null,
+    "validation_status": "validated_manual_execution_disabled",
+    "validation_reason": "演示事件",
+    "paper_order_id": null
+  }
+}
